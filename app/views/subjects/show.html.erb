@@ -1,0 +1,25 @@
+<h4>subjects dedails</h4>
+    <h4 class="text-center"> subjects information </h4>
+    <p>
+       <strong> Name :</strong>
+       <%= @subject.name %>
+    </p>
+
+    <p>
+       <strong>sub_type :</strong>
+       <%= @subject.sub_type %>
+    </p>
+
+    <p>
+       <strong>student_id :</strong>
+       <%= @subject.student_id %>
+    </p>
+    <p>
+        <strong></strong>
+         <% if subject.image.attached? %>
+          <%= image_tag subject.image %>
+        <% end %>
+    </p>
+
+ <%= link_to 'Back to subjecys' , subjects_path %>
+<%= link_to "Edit " ,subject_path(@subject) %>

@@ -1,0 +1,34 @@
+<div class="about_section">
+<%= form_with model: @subject  do |f| %>
+    <div>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+       <% @subject.errors.full_messages_for(:name).each do |message| %>
+       <p> <%= message %>
+       <% end %>
+    </div>
+     <div>
+      <%= f.label :sub_type %><br>
+      <%= f.text_field :sub_type %>
+       <% @subject.errors.full_messages_for(:sub_type).each do |message| %>
+       <p> <%= message %>
+       <% end %>
+    </div>
+     <div>
+      <%= f.label :student_id %><br>
+      <%= f.text_field :student_id%>
+       <% @subject.errors.full_messages_for(:student_id).each do |message| %>
+       <p> <%= message %>
+       <% end %>
+    </div>
+    <div>
+        <%= f.label :image %></br>
+        <%= f.file_field :image %>
+    </div>
+    <p>
+        <%= f.submit %>
+        <%= link_to 'Back to subjects' , subjects_path %>
+    </p>
+  <% end %>
+</div>
+ 

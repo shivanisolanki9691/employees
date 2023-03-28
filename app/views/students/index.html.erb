@@ -1,0 +1,32 @@
+<!-- <table>
+	<%= flash[:notice] %>
+	<h3> Students List</h3>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>State</th>
+			<th>Country</th>
+			<th>Pincode</th>
+			<th>Address</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @students.each do |student| %>
+		<tr>
+			<td><%= student.name %></td>
+			<td><%= student.personal_email %></td>
+			<td><%= student.state %></td>
+			<td><%= student.country %></td>
+			<td><%= student.pincode %></td>
+			<td><%= student.address_line_1 %></td>
+			<td><%= link_to "Edit " ,edit_student_path(student) %>
+				<%= link_to "show " ,new_student_path %>
+				<%= link_to "Delete " ,student_path(student), method: :delete, data:{confirm: 'are you sure this data eleted '} %>
+		</tr>
+		<% end %>
+	</tbody>
+	<%= link_to "create new student",new_student_path %>
+
+</table> -->

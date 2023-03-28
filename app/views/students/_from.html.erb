@@ -1,0 +1,72 @@
+<div class="about_section">
+<%= form_with model: @student  do |f| %>
+    <div>
+      <%= f.label :first_name %><br>
+      <%= f.text_field :first_name %>
+       <% @student.errors.full_messages_for(:first_name).each do |message| %>
+       <p> <%= message %>
+       <% end %>
+    </div>
+    <div>
+      <%= f.label :middle_name %><br>
+      <%= f.text_field :middle_name %>
+       <% @student.errors.full_messages_for(:middle_name).each do |message| %>
+       <p> <%= message %>
+       <% end %>
+    </div>
+      <div>
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name %>
+       <% @student.errors.full_messages_for(:last_name).each do |message| %>
+       <p> <%= message %>
+       <% end %>
+    </div>
+
+    <div>
+      <%= f.label :personal_email %><br>
+      <%= f.text_field :personal_email %>
+       <% @student.errors.full_messages_for(:personal_email).each do |message| %>
+       <p> <%= message %>
+       <% end %>
+    </div>
+    <div>
+      <%= f.label :state%><br>
+      <%= f.text_field :state %>
+       <% @student.errors.full_messages_for(:state).each do |message| %>
+       <p> <%= message %>
+       <% end %>
+    </div>
+    <div>
+      <%= f.label :country %><br>
+      <%= f.text_field :country %>
+       <% @student.errors.full_messages_for(:country).each do |message| %>
+       <p> <%= message %>
+       <% end %>
+    </div>
+    <div>
+      <%= f.label :pincode %><br>
+      <%= f.text_field :pincode %>
+       <% @student.errors.full_messages_for(:pincode).each do |message| %>
+       <p> <%= message %>
+       <% end %>
+    </div>
+    <div>
+      <%= f.label :address_line_1 %><br>
+      <%= f.text_field :address_line_1 %>
+       <% @student.errors.full_messages_for(:address_line_1).each do |message| %>
+       <p> <%= message %>
+       <% end %>
+    </div>
+    <div>
+      <%= f.label :address_line_2 %><br>
+      <%= f.text_field :address_line_2 %>
+       <% @student.errors.full_messages_for(:address_line_2).each do |message| %>
+       <p> <%= message %>
+       <% end %>
+    </div>
+    <p>
+        <%= f.submit %>
+        <%= link_to 'Back to students' , students_path %>
+    </p>
+  <% end %>
+</div>
